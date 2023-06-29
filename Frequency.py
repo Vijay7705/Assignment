@@ -1,4 +1,4 @@
-def printChar(arr, Len):
+def most_frequent(arr, Len):
     freq = {}
     for i in range(Len):
          
@@ -14,9 +14,9 @@ def printChar(arr, Len):
             if (value > currentMax or (value == currentMax and key > arg_max)):
                 arg_max = key
                 currentMax = value
-        print(f"{arg_max} : {currentMax}")
+        print(f"{arg_max} = {currentMax}")
         freq.pop(arg_max)
         size -= 1
 Str = input("Enter:")
 Len = len(Str)
-printChar(list(Str), Len)
+most_frequent(list(Str), Len)
